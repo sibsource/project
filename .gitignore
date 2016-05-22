@@ -1,0 +1,6 @@
+*~
+.install
+node_modules/*
+npm-debug.log
+__pycache__
+assets/components

@@ -1,0 +1,19 @@
+{
+  "name": "project",
+  "description": "project dependencies",
+  "main": "bower.json",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "assets/components"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "~4"
+  },
+  "devDependencies": {}
+}
