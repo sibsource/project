@@ -1,6 +1,9 @@
 *~
 .install
-node_modules/*
+.sass-cache
+db.sqlite3
 npm-debug.log
 __pycache__
 assets/components
+node_modules
+virtualenv

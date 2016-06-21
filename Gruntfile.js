@@ -7,7 +7,24 @@ module.exports = function(grunt) {
       static: {
         js: ['assets/js/**/*.js'],
         css: ['assets/css/**/*.css'],
+        sass: ['assets/scss/**/*.scss'],
         dist: 'assets'
+      }
+    },
+    csslint: {
+      // where to take configuration for csslint
+      options: {
+        csslintrc: '.csslintrc'
+      },
+      strict: {
+        options: {
+          import: 2
+        },
+        src: [
+          '<%= globalConfig.static.css %>',
+          '!assets/css/vendor/*.css',
+          '!assets/css/client.css'
+        ]
       }
     },
     jscs: {
@@ -29,6 +46,17 @@ module.exports = function(grunt) {
       },
       target: ['<%= globalConfig.static.js %>']
     },
+    sass: {
+      dev: {
+        options: {
+          style: 'expanded',
+          quiet: true
+        },
+        files: {
+          '<%= globalConfig.static.dist %>/css/sass.css': 'assets/scss/app.scss'
+        }
+      }
+    },
     bower_concat: {
       all: {
         dest: {
@@ -37,6 +65,7 @@ module.exports = function(grunt) {
         },
         dependencies: {
           'bootstrap': 'jquery',
+          'tether': 'bootstrap'
         },
         mainFiles: {
           'bootstrap': [
@@ -130,9 +159,10 @@ module.exports = function(grunt) {
       }
     }
   });
-  grunt.registerTask('default', ['jscs', 'eslint']);
+  grunt.registerTask('default', ['jscs', 'eslint', 'csslint']);
   grunt.registerTask('build', [
     'bower_concat',
+    'sass',
     'concat',
     'uglify',
     'cssmin',

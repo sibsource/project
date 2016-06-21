@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <meta name="description" 
+          content="">
+    <title>{% block title %}The Project{% endblock %}</title>
+    {% block stylesheets %}
+    <link rel="stylesheet" href="/static/bower.min.css">
+    <link rel="stylesheet" href="/static/app.min.css">
+    {% endblock %}
+  </head>
+  <body>
+    <header>
+      <h1>The project</h1>
+    </header>
+
+    <section role="main">
+      {% block content %}{% endblock %}
+    </section>
+
+    {% block javascript %}
+    <script src="{% static 'bower.min.js' %}"></script>
+    <script src="{% static 'app.min.js' %}"></script>
+    {% endblock %}
+  </body>
+</html>
