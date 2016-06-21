@@ -8,16 +8,18 @@
           content="">
     <title>{% block title %}The Project{% endblock %}</title>
     {% block stylesheets %}
-    <link rel="stylesheet" href="/static/bower.min.css">
-    <link rel="stylesheet" href="/static/app.min.css">
+    <link rel="stylesheet" 
+          href="{% static 'bower.min.css' %}">
+    <link rel="stylesheet" 
+          href="{% static 'app.min.css' %}">
     {% endblock %}
   </head>
   <body>
-    <header class="container">
-      <h1 class="">The project</h1>
+    <header class="header">
+      {% include 'nav.html' %}
     </header>
 
-    <section role="main">
+    <section class="content" role="main">
       {% block content %}{% endblock %}
     </section>
 

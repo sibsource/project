@@ -1,11 +1,16 @@
 a {
-  color: $base-link-color;
+  color: $base-violet;
   text-decoration: underline;
 
   &:active,
   &:focus,
   &:hover {
-    color: $base-link-color;
+    color: $base-violet;
     text-decoration: none;
   }
+}
+
+h1 {
+  font-weight: 600;
+  color: $base-violet;
 }
