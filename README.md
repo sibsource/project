@@ -1,3 +1,11 @@
+Начало работы
+-------------
+
+Установка компонентов nodejs
+
+    $ ./install.sh
+
+
 Структура проекта
 -----------------
 
@@ -74,28 +82,28 @@
 Корневой файл находится в каталоге config/ проекта и определяет в себе 
 некторые адреса и правила их обработки.
 
-url(r'^admin/', admin.site.urls),
-url(r'^login/$', login, name='login')
+    url(r'^admin/', admin.site.urls),
+    url(r'^login/$', login, name='login')
 
 Также в этот файл могут подключаться файлы конфигурации URL приложений из 
 модуля приложений, соответственно.
 
-url(r'^', include('apps.app.urls'))
+    url(r'^', include('apps.app.urls'))
 
 Настройки статики находятся в файле config/settings/common/static.py 
 проекта.
 
 Определение адресов для статики:
 
-STATIC_URL = '/static/'
+    STATIC_URL = '/static/'
 
 Определение путей до статики на сервере:
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+    STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "assets"),
-)
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR, "assets"),
+    )
 
 В STATIC_ROOT собираются файлы из определённых в STATICFILES_DIRS мест и 
 каталогов /static/ приложений (apps/app/static/) Вся статика проекта 
@@ -105,15 +113,6 @@ STATICFILES_DIRS = (
 
 Grunt: сбор файлов статики, обработка.
 --------------------------------------
-
-Для управления задачами по подготовке и сборке компонентов проекта 
-используется менеджер задач Grunt.
-
-- Управление сторонними компонентами
-- Запуск линтеров для JS, CSS, SCSS
-- Компиляция SCSS
-- Компиляция Handlebars
-- Объединение и минификация файлов стилей и скриптов
 
     project/
     -- assets/
@@ -141,19 +140,28 @@ Grunt: сбор файлов статики, обработка.
     -- install.sh
     -- package.json
 
+Для управления задачами по подготовке и сборке компонентов проекта 
+используется менеджер задач Grunt.
+
+- Управление сторонними компонентами
+- Запуск линтеров для JS, CSS, SCSS
+- Компиляция SCSS
+- Компиляция Handlebars
+- Объединение и минификация файлов стилей и скриптов
+
 Устанавливаемые компоненты (jQuery, bootstrap и т. д.) определены в 
 секции "dependencies" файла bower.json. Всё устанавливается в каталог 
 assets/components.
 
 Установка и удаление дополнительных компонентов:
 
-$ grunt bowerinstall:package_name#version
-$ grunt boweruninstall:package_name
+    $ grunt bowerinstall:package_name#version
+    $ grunt boweruninstall:package_name
 
 Сборка: компиляция SCSS, конкатенация CSS и JS, минификация 
 производятся командой:
 
-$ grunt build
+    $ grunt build
 
 После запуска происходит следующее:
 
@@ -197,7 +205,7 @@ Grunt: запуск проверки
 
 Запуск проверки производится командой:
 
-$ grunt
+    $ grunt
 
 Поочерёдно будут запущены проверки синтаксиса и соответствия стандартам 
 для CSS и JS файлов.
@@ -206,7 +214,7 @@ $ grunt
 Grunt: автоматизация
 --------------------
 
-$ grunt watch
+    $ grunt watch
 
 Производится запуск проверки и последующей сборки статики для проекта. После 
 задача находится в режиме ожидания и после внесения в файлы изменений 
