@@ -57,6 +57,38 @@ module.exports = function(grunt) {
         }
       }
     },
+    watch: {
+      bower: {
+        files: ['bower.json'],
+        tasks: ['exec:bower_install', 'build']
+      },
+      js: {
+        files: '<%= globalConfig.static.js %>',
+        tasks: ['jscs', 'eslint', 'concat:js', 'uglify:app'],
+        options: {
+          livereload: true
+        }
+      },
+      css: {
+        files: ['<%= globalConfig.static.css %>'],
+        tasks: ['csslint', 'concat:css', 'cssmin:app'],
+        options: {
+          livereload: true
+        }
+      },
+      sass: {
+        files: ['<%= globalConfig.static.sass %>'],
+        tasks: ['sass'],
+        options: {
+          livereload: true
+        }
+      }
+    },
+    exec: {
+      bower_install: {
+        cmd: 'bower install'
+      }
+    },
     bower_concat: {
       all: {
         dest: {
