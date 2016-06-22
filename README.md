@@ -6,69 +6,69 @@
 может содержать каталог /templates/ с шаблонами приложения и /static/ с 
 файлами скриптов, стилей и т. д.
 
-project/
--- apps/
--- -- app/
--- -- -- views.py
--- -- -- models.py
--- -- -- urls.py
--- -- templates/
--- -- -- app/
--- -- -- -- index.html
--- -- static/
--- -- -- js/
--- -- -- css/
--- assets/
--- -- components/
--- -- css/
--- -- -- vendor/
--- -- fonts/
--- -- handlebars/
--- -- img/
--- -- js/
--- -- -- vendor/
--- -- scss/
--- -- app.css
--- -- app.js
--- -- bower.css
--- -- bower.js
--- config/
--- -- settings/
--- -- -- common/
--- -- -- -- static.py
--- -- -- -- templates.py
--- -- -- local.py
--- -- -- production.py
--- -- urls.py
--- media/
--- templates/
--- -- app/
--- -- -- index.html
--- -- base.html
--- -- handlebars/
--- node_modules/
--- .csslintrc
--- .eslintrc
--- .jscsrc
--- bower.json
--- Gruntfile.js
--- install.sh
--- package.json
+    project/
+    -- apps/
+    -- -- app/
+    -- -- -- views.py
+    -- -- -- models.py
+    -- -- -- urls.py
+    -- -- templates/
+    -- -- -- app/
+    -- -- -- -- index.html
+    -- -- static/
+    -- -- -- js/
+    -- -- -- css/
+    -- assets/
+    -- -- components/
+    -- -- css/
+    -- -- -- vendor/
+    -- -- fonts/
+    -- -- handlebars/
+    -- -- img/
+    -- -- js/
+    -- -- -- vendor/
+    -- -- scss/
+    -- -- app.css
+    -- -- app.js
+    -- -- bower.css
+    -- -- bower.js
+    -- config/
+    -- -- settings/
+    -- -- -- common/
+    -- -- -- -- static.py
+    -- -- -- -- templates.py
+    -- -- -- local.py
+    -- -- -- production.py
+    -- -- urls.py
+    -- media/
+    -- templates/
+    -- -- app/
+    -- -- -- index.html
+    -- -- base.html
+    -- -- handlebars/
+    -- node_modules/
+    -- .csslintrc
+    -- .eslintrc
+    -- .jscsrc
+    -- bower.json
+    -- Gruntfile.js
+    -- install.sh
+    -- package.json
 
 
 Конфигурационные файлы
 ----------------------
 
-project/
--- apps/
--- -- app/
--- -- -- urls.py
--- config/
--- -- settings/
--- -- -- common/
--- -- -- -- static.py
--- -- -- -- templates.py
--- -- urls.py
+    project/
+    -- apps/
+    -- -- app/
+    -- -- -- urls.py
+    -- config/
+    -- -- settings/
+    -- -- -- common/
+    -- -- -- -- static.py
+    -- -- -- -- templates.py
+    -- -- urls.py
 
 Ссылки и привязка к Представлениям определяются в файлах urls.py. 
 Корневой файл находится в каталоге config/ проекта и определяет в себе 
@@ -115,31 +115,31 @@ Grunt: сбор файлов статики, обработка.
 - Компиляция Handlebars
 - Объединение и минификация файлов стилей и скриптов
 
-project/
--- assets/
--- -- components/
--- -- css/
--- -- -- client.css
--- -- fonts/
--- -- handlebars/
--- -- img/
--- -- js/
--- -- scss/
--- -- -- base.scss
--- -- app.css
--- -- app.js
--- -- bower.css
--- -- bower.js
--- templates/
--- -- handlebars/
--- node_modules/
--- .csslintrc
--- .eslintrc
--- .jscsrc
--- bower.json
--- Gruntfile.js
--- install.sh
--- package.json
+    project/
+    -- assets/
+    -- -- components/
+    -- -- css/
+    -- -- -- client.css
+    -- -- fonts/
+    -- -- handlebars/
+    -- -- img/
+    -- -- js/
+    -- -- scss/
+    -- -- -- base.scss
+    -- -- app.css
+    -- -- app.js
+    -- -- bower.css
+    -- -- bower.js
+    -- templates/
+    -- -- handlebars/
+    -- node_modules/
+    -- .csslintrc
+    -- .eslintrc
+    -- .jscsrc
+    -- bower.json
+    -- Gruntfile.js
+    -- install.sh
+    -- package.json
 
 Устанавливаемые компоненты (jQuery, bootstrap и т. д.) определены в 
 секции "dependencies" файла bower.json. Всё устанавливается в каталог 
