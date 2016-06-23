@@ -132,6 +132,7 @@
 осуществляется специальной командой: manage.py collectstatic.
 
 https://docs.djangoproject.com/en/1.9/topics/http/urls/
+
 https://docs.djangoproject.com/en/1.9/ref/contrib/staticfiles/
 
 
@@ -209,6 +210,7 @@ assets/components.
     шаблонов в templates/handlebars
 
 http://gruntjs.com/getting-started
+
 https://bower.io/
 
 
@@ -227,7 +229,9 @@ Gruntfile.js -- главный конфигурационный файл с оп
 регистрацией команд типа grunt build, grunt bowerinstall.
 
 https://github.com/CSSLint/csslint/wiki/Rules
+
 http://jscs.info/rules
+
 http://eslint.org/docs/user-guide/configuring
 
 
