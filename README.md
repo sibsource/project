@@ -131,9 +131,8 @@
 хранится в каталоге assets/ в корне проекта. Сбор в static/ 
 осуществляется специальной командой: manage.py collectstatic.
 
-https://docs.djangoproject.com/en/1.9/topics/http/urls/
-
-https://docs.djangoproject.com/en/1.9/ref/contrib/staticfiles/
+*   https://docs.djangoproject.com/en/1.9/topics/http/urls/
+*   https://docs.djangoproject.com/en/1.9/ref/contrib/staticfiles/
 
 
 Grunt: сбор файлов статики, обработка.
@@ -192,26 +191,20 @@ assets/components.
 
 1.  bower_concat: из файлов и скриптов установленных компонентов производятся 
     два файла, assets/bower.css и assets/bower.js соответственно.
-
 2.  sass: запускается SASS-компилятор, из assets/scss/base.scss производится 
     assets/css/client.css.
-
 3.  concat: объединяются файлы стилей и скрипты проекта, всё (исключая 
     содержимое подкаталогов vendor) из assets/css и assets/js объединяется в 
     assets/app.css и assets/app.js соответственно.
-
 4.  uglify: производятся минифицированные версии файлов assets/bower.js и 
     assets/app.js.
-
 5.  cssmin: производятся минифицированные версии файлов assets/bower.css и 
     assets/app.css
-
 6.  shell:handlebars: производится файл assets/handlebars/templates.js из 
     шаблонов в templates/handlebars
 
-http://gruntjs.com/getting-started
-
-https://bower.io/
+*   http://gruntjs.com/getting-started
+*   https://bower.io/
 
 
 Grunt: конфигурация
@@ -228,11 +221,9 @@ package.json -- модули для Grunt. Компиляторы, сборщи�
 Gruntfile.js -- главный конфигурационный файл с описанием задач, настроек и 
 регистрацией команд типа grunt build, grunt bowerinstall.
 
-https://github.com/CSSLint/csslint/wiki/Rules
-
-http://jscs.info/rules
-
-http://eslint.org/docs/user-guide/configuring
+*   https://github.com/CSSLint/csslint/wiki/Rules
+*   http://jscs.info/rules
+*   http://eslint.org/docs/user-guide/configuring
 
 
 Grunt: запуск проверки
